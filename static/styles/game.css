@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Marcellus, sans-serif;
+}
+
+body {
+    background-color: red;
+}
+
+#title {
+    font-size: 80px;
+    color: yellow;   
+    text-align: center; 
+    margin: 32px;
+}
+
+#boardSect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+#left {
+    text-align: center;
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.boardRow {
+    display: flex;
+    gap: 16px;
+}
+
+.boardIcon {
+    background-color: white;
+    border: 8px solid gold;
+    border-radius: 50px;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.boardIcon p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.boardIcon img {
+    width: 180px;
+    height: 180px;
+}
+
+.boardIcon:hover > img {
+    width: 190px;
+    height: 190px;
+}
+
+.boardIcon:active {
+    background-color: yellow;
+}
+
+#boardText {
+    color: yellow;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#balance, #currentBet, #right button {
+    background-color: yellow;
+    border-radius: 32px;
+    border: 8px solid gold;
+    padding: 24px;
+    font-size: 32px;
+    width: 100%;
+}
+
+#right button {
+    cursor: pointer;
+}
+
+#right button:hover {
+    background-color: rgb(255, 235, 0);
+}
+
+#diceSect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#diceSect p {
+    color: yellow;
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+#diceResults {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dice {
+    width: 170px;
+    height: 170px;
+    background-color: white;
+    border-radius: 100px;
+    border: 8px solid gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bau Cua | Vincent Dang</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/game.css') }}">
+</head>
+
+<body>
+    <audio id="winSound" src="{{ url_for('static', filename='styles/winSound.mp3') }}" preload="auto"></audio>
+    <h1 id="title">Bầu Cua</h1>
+    <div id="boardSect">
+        <div id="left">
+            <div id="board">
+                <div class="boardRow" id="boardRow1">
+                    <button onclick="incrementCounter('Nai')" class="boardIcon" id="icon1">
+                        <img src="{{ url_for('static', filename='styles/images/1.png') }}" alt="Nai">
+                        <p>Nai</p>
+                    </button>
+                    <button onclick="incrementCounter('Bau')" class="boardIcon" id="icon2">
+                        <img src="{{ url_for('static', filename='styles/images/2.png') }}" alt="Bầu">
+                        <p>Bầu</p>
+                    </button>
+                    <button onclick="incrementCounter('Ca')" class="boardIcon" id="icon3">
+                        <img src="{{ url_for('static', filename='styles/images/3.png') }}" alt="Cá">
+                        <p>Cá</p>
+                    </button>
+                </div>
+                <div class="boardRow" id="boardRow2">
+                    <button onclick="incrementCounter('Ga')" class="boardIcon" id="icon1">
+                        <img src="{{ url_for('static', filename='styles/images/4.png') }}" alt="Gà">
+                        <p>Gà</p>
+                    </button>
+                    <button onclick="incrementCounter('Cua')" class="boardIcon" id="icon2">
+                        <img src="{{ url_for('static', filename='styles/images/5.png') }}" alt="Cua">
+                        <p>Cua</p>
+                    </button>
+                    <button onclick="incrementCounter('Tom')" class="boardIcon" id="icon3">
+                        <img src="{{ url_for('static', filename='styles/images/6.png') }}" alt="Tôm">
+                        <p>Tôm</p>
+                    </button>
+                </div>
+                <p id="boardText">Click/Tap an Icon to Place $1</p>
+            </div>
+        </div>
+        <div id="right">
+            <div id="balance">
+                <p><b>Balance: $10</b></p>
+            </div>
+            <div id="currentBet">
+                <p><b>Current Bet:</b></p>
+                <p class="counter" id="betNai">$0 Nai</p>
+                <p class="counter" id="betBau">$0 Bầu</p>
+                <p class="counter" id="betCa">$0 Cá</p>
+                <p class="counter" id="betGa">$0 Gà</p>
+                <p class="counter" id="betCua">$0 Cua</p>
+                <p class="counter" id="betTom">$0 Tôm</p>
+            </div>
+            <button onclick="resetBet()">
+                <b>Reset Bet</b>
+            </button>
+            <button onclick="placeBetAndRoll()">
+                <b>Place Bet & Roll</b>
+            </button>
+        </div>
+        <div id="diceSect">
+            <p>Dice Results</p>
+            <div id="diceResults">
+                <div class="dice" id="dice1"></div>
+                <div class="dice" id="dice2"></div>
+                <div class="dice" id="dice3"></div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+</body>
+
+</html>
